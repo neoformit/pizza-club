@@ -1,0 +1,24 @@
+{% extends "form/header.html" %}
+{% block content %}
+
+<div class="col-sm-2">
+  <br>
+</div>
+
+<div class="col-sm-8">
+	<div class="alert alert-success" role="alert">
+	  <h4 class="alert-heading">Order submitted:</h4>
+    <br>
+		<span class="indent">1x {{ item }} </span>
+    <br>
+    <br>
+	  <p>Aww yeah, you better be ready for some hot, sweaty... pizza!</p>
+		<p>Be sure to make payment for your order before Friday 11:00, or your order will probably be forgotten.</p>
+	  <hr>
+	  <p class="mb-0">Today's pizza fetcher is...</p>
+		<br>
+		<h4 class="alert-heading">{{ pizzaman }}!</h4>
+	</div>
+</div>
+
+{% endblock %}

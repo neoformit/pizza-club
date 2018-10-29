@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Pizza club</title>
+	<meta charset="utf-8" />
+    {% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'form/css/bootstrap.min.css' %}" type = "text/css"/>
+    <style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+		.jumbotron {
+        background: #70a8c1;
+        color: white;
+        padding-bottom: 10px
+    }
+    .jumbotron .btn-primary {
+        background: #5092af;
+        border-color: #5092af
+    }
+    .jumbotron p {
+        color: #bed7e5
+    }
+	</style>
+</head>
+
+<body class="body" style="background-color:#ffffff">
+
+	<div class="row" style="background-color:#f6f6f6">
+		<div class="col-sm-6">
+			<br>
+			<br>
+			<center>
+				<h1> Orders are <br> closed! </h1>
+			</center>
+		</div>
+
+		<div class="col-sm-2">
+			<br>
+			<br>
+			<center>
+				<img class="img-fluid" src="{% static 'form/img/logo.png' %}" alt="Responsive image" width="200">
+			</center>
+		</div>
+
+		<div class="col-sm-4">
+	  	<img class="img-fluid" src="{% static 'form/img/pizza.jpg' %}" alt="Responsive image" width="200">
+		</div>
+  </div>
+
+	<br>
+	<br>
+
+	<div class="container-fluid" style="min-height:95%; ">
+		<br>
+		<br>
+		<div class="col-sm-6">
+			<center>
+				<h2>
+					<small class="text-muted">Orders will reopen on Monday!</small>
+				</h2>
+			</center>
+		<br>
+		<br>
+	</div>
+
+	<div class="col-sm-6">
+		<img class="img-fluid" src="{% static 'form/img/closed.jpg' %}" alt="Responsive image" width="300">
+	</div>
+</body>

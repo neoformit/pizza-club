@@ -1,0 +1,56 @@
+{% extends "form/header.html" %}
+{% block content %}
+
+<!-- radiobutton html % css from https://codepen.io/lehonti/pen/OzoXVa -->
+
+<div class="col-sm-1">
+</div>
+
+
+<form method="POST" action="/confirm/">{% csrf_token %}
+  <div class="col-sm-3">
+  	<h2>
+  		Place your order
+  		<br>
+  		<small class="text-muted">(Orders close 11am Friday!)</small>
+  	</h2>
+  	<br>
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" name="name" placeholder="Enter name" class="form-control" required="">
+    </div>
+    <button id="submit-button" class="btn btn-primary btn-lg">Submit</button>
+  </div>
+
+  <div class="col-sm-1">
+  </div>
+
+  <div class="col-sm-6">
+    <div class="list-group">
+
+      <input type="radio" name="item" value="Vegan margherita" id="CheckBox1" />
+      <label class="list-group-item" for="CheckBox1">Vegan margherita - $7.95</label>
+
+      <input type="radio" name="item" value="Vegan spicy veg trio" id="CheckBox2" />
+      <label class="list-group-item" for="CheckBox2">Vegan spicy veg trio - $7.95</label>
+
+      <input type="radio" name="item" value="Spicy veg trio" id="CheckBox3" />
+      <label class="list-group-item" for="CheckBox3">Spicy veg trio - $5.00</label>
+
+      <input type="radio" name="item" value="Margherita" id="CheckBox4" />
+      <label class="list-group-item" for="CheckBox4">Margherita - $5.00</label>
+
+      <input type="radio" name="item" value="BBQ italian sausage" id="CheckBox5" />
+      <label class="list-group-item" for="CheckBox5">BBQ italian sausage - $5.00</label>
+
+      <input type="radio" name="item" value="BBQ pork & onion" id="CheckBox6" />
+      <label class="list-group-item" for="CheckBox6">BBQ pork & onion - $5.00</label>
+
+      <input type="radio" name="item" value="Pepperoni" id="CheckBox7" />
+      <label class="list-group-item" for="CheckBox7">Pepperoni - $5.00</label>
+
+    </div>
+  </div>
+</form>
+
+{% endblock %}

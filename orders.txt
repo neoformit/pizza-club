@@ -1,0 +1,12 @@
+2018-10-26	Sean	Vegan margherita	7.95
+2018-10-26	Alise fox	BBQ italian sausage	5.0
+2018-10-26	Rick	Vegan spicy veg trio	7.95
+2018-10-26	Luke	Pepperoni	5.0
+2018-10-26	Luke	Margherita	5.0
+2018-10-26	Cameron	Spicy veg trio	5.0
+2018-10-27	Cameron	Vegan margherita	7.95
+2018-10-27	Rick	Spicy veg trio	5.0
+2018-10-29	Cameron	Vegan spicy veg trio	7.95
+2018-10-29	Rick	Spicy veg trio	5.0
+2018-10-29	Sean	BBQ pork & onion	5.0
+2018-10-29	Sean-thincrust	Pepperoni	5.0
