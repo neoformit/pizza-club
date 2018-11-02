@@ -1,2 +1,2 @@
-web: gunicorn gettingstarted.wsgi
+web: gunicorn pizzaclub.wsgi
 worker: python dispatch.py
