@@ -20,7 +20,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+# SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = "g#y2cqrex&r-mfeb6@e^yy=+s@%$9=c%wg041pgg19&owh02$q"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -78,7 +79,7 @@ WSGI_APPLICATION = 'pizzaclub.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgresql-rugged-58988',
+        'NAME': 'deev51d3l0cf3s',
         'USER': 'wtnanmzzojqcrr',
         'PASSWORD': 'df0c7b4f8bf1e69acb16ada6eff2ae964ae47c50ffcccf12f1cffbbb3ac45966',
         'HOST': 'ec2-79-125-8-105.eu-west-1.compute.amazonaws.com',

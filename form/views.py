@@ -103,8 +103,8 @@ def confirm(request):
 def confirmation(request):
     # Read order from db into dictionary to render as below:
     o = Order.objects.get(id=request.session["order_id"])
-    p = Participant.objects.latest("last_turn")
-    return render(request, 'form/confirm.html', {'item':o.item,'crust':o.crust,'pizzaman':p.name})
+    # p = Participant.objects.latest("last_turn")
+    return render(request, 'form/confirm.html', {'item':o.item,'crust':o.crust,'pizzaman':"undecided"})
     # Maybe also add in a list of current orders??
 
 def cancel(request):
