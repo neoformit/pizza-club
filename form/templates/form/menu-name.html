@@ -6,6 +6,7 @@
 <div class="col-sm-1">
 </div>
 
+
 <form method="POST" action="/confirm/">{% csrf_token %}
   <div class="col-sm-3">
   	<h2>
@@ -18,10 +19,9 @@
       <label>Name</label>
       <input type="text" name="name" placeholder="Enter name" class="form-control" required="">
     </div>
-    <div class="form-group">
-      <label>Comments</label>
-      <input type="text" name="comments" placeholder="I'm special and I want a custom order" class="form-control" required="">
-    </div>
+    <br>
+    <p class="bg-warning">Please select an item to order</p>
+
     <button id="submit-button" class="btn btn-primary btn-lg">Submit</button>
   </div>
 

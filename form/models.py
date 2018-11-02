@@ -6,7 +6,9 @@ class Order(models.Model):
     date = models.DateField(("Date"), default=datetime.date.today)
     name = models.CharField(max_length=50)
     item = models.CharField(max_length=50)
+    crust = models.CharField(max_length=50, default="regular")
     cost = models.DecimalField(max_digits=5,decimal_places=2)
+    comments = models.CharField(max_length=50, default="")
     def __str__(self):
         return "%s - %s" % (self.date,self.name)
 
