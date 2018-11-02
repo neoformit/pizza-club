@@ -1,10 +1,4 @@
 django
 gunicorn
 django-heroku
-os
-sys
-time
 schedule
-datetime
-email
-smtplib
