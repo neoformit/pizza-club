@@ -1,0 +1,58 @@
+{% extends "form/header.html" %}
+{% block content %}
+
+<div class="col-sm-1">
+</div>
+
+<div class="col-sm-3">
+	<h2>
+		Place your order
+		<br>
+		<small class="text-muted">(Orders close 11am Friday!)</small>
+	</h2>
+
+	<br>
+	<br>
+	<div class="form-group mb2">
+    <label for="name">Your name</label>
+    <input type="text" class="form-control" id="name" placeholder="Enter name" maxlength=25 required="">
+    <small id="help" class="form-text text-muted">So your pizza doesn't get lost.</small>
+  </div>
+	<button id="submit-button" class="btn btn-primary btn-lg">Place order</button>
+</div>
+
+<div class="col-sm-6">
+	<br>
+	<ul class="list-group">
+	  <button type="button" class="list-group-item list-group-item-action list-group-item-success" id="Vg margherita">
+	    Vegan margherita
+	    <span class="badge badge-primary badge-pill">$7.95</span>
+	  </button>
+	  <button type="button" class="list-group-item list-group-item-action list-group-item-success" id="Vg veg trio">
+	    Vegan spicy veg trio
+	    <span class="badge badge-primary badge-pill">$7.95</span>
+	  </button>
+		<button type="button" class="list-group-item list-group-item-action" id="Veg trio">
+			Spicy veg trio
+			<span class="badge badge-primary badge-pill">$5.00</span>
+		</button>
+	  <button type="button" class="list-group-item list-group-item-action" id="Margherita">
+	    Margherita
+	    <span class="badge badge-primary badge-pill">$5.00</span>
+	  </button>
+		<button type="button" class="list-group-item list-group-item-action" id="BBQ sausage">
+			BBQ italian sausage
+			<span class="badge badge-primary badge-pill">$5.00</span>
+		</button>
+		<button type="button" class="list-group-item list-group-item-action" id="BBQ pork">
+			BBQ pork & onion
+			<span class="badge badge-primary badge-pill">$5.00</span>
+		</button>
+		<button type="button" class="list-group-item list-group-item-action" id="Pepperoni">
+			Pepperoni
+			<span class="badge badge-primary badge-pill">$5.00</span>
+		</button>
+	</ul>
+</div>
+
+{% endblock %}

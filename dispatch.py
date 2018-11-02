@@ -70,17 +70,18 @@ def html_table(orders):
         <th>Name</th>
         <th>Order</th> 
         <th>Cost</th>
+        <th>Comments</th>
       </tr>
     """
     
     for o in orders:
-        entries = (o.name, o.item, str(o.cost))
+        entries = (o.name, o.item, str(o.cost), o.comments)
         html += "<tr>"
         for e in entries:
             html += "<td>" + e + "</td>\n"
         html += "</tr>"
     
-    html += "</table> </body> </html>"      
+    html += "</table> </body> </html>"
     
     return html        
         
