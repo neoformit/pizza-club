@@ -25,7 +25,7 @@ SECRET_KEY = 'g#y2cqrex&r-mfeb6@e^yy=+s@%$9=c%wg041pgg19&owh02$q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [pizza-club.herokuapp.com]
+ALLOWED_HOSTS = ['pizza-club.herokuapp.com']
 
 
 # Application definition
