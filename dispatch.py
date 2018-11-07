@@ -25,7 +25,7 @@ def send_email(to,body):
     msg = MIMEMultipart('alternative')
     msg['From'] = fromaddr
     msg['To'] = toaddr
-    msg['Subject'] = 'How about this?!'
+    msg['Subject'] = 'Sent at %s' % str(datetime.datetime.now().time())[:8]
     msg.attach(MIMEText(body, 'html', 'UTF-8'))
     server = smtplib.SMTP('smtp.gmail.com:587')
     server.ehlo()
