@@ -115,7 +115,7 @@ def dispatch():
                 break
             else: continue
 
-schedule.every().friday.at("11:10").do(dispatch)
+schedule.every().friday.at("01:10").do(dispatch)
 dispatch()
 while True:
     schedule.run_pending()
