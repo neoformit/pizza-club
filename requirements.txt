@@ -4,3 +4,4 @@ django-heroku
 schedule
 whitenoise
 boto
+dj-database-url
