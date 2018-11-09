@@ -3,3 +3,4 @@ gunicorn
 django-heroku
 schedule
 whitenoise
+boto
