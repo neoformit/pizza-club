@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 import django_heroku
-from boto.s3.connection import S3Connection
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,8 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = "g#y2cqrex&r-mfeb6@e^yy=+s@%$9=c%wg041pgg19&owh02$q"
-SECRET_KEY = S3Connection(os.environ['SECRET_KEY'])
+SECRET_KEY = "g#y2cqrex&r-mfeb6@e^yy=+s@%$9=c%wg041pgg19&owh02$q"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -77,21 +75,16 @@ WSGI_APPLICATION = 'pizzaclub.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'deev51d3l0cf3s',
-        'USER': 'wtnanmzzojqcrr',
-        'PASSWORD': "df0c7b4f8bf1e69acb16ada6eff2ae964ae47c50ffcccf12f1cffbbb3ac45966",
-        'HOST': 'ec2-79-125-8-105.eu-west-1.compute.amazonaws.com',
-        'PORT': '',
-    }
-}
-
-# Configure Heroku Postgresql database
-import dj_database_url
-db_from_env = dj_database_url.config()
-DATABASES['default'].update()
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': 'deev51d3l0cf3s',
+#        'USER': 'wtnanmzzojqcrr',
+#        'PASSWORD': "df0c7b4f8bf1e69acb16ada6eff2ae964ae47c50ffcccf12f1cffbbb3ac45966",
+#        'HOST': 'ec2-79-125-8-105.eu-west-1.compute.amazonaws.com',
+#        'PORT': '',
+#    }
+#}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -131,5 +124,9 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+
+# Configure Heroku Postgresql database
+import dj_database_url
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 django_heroku.settings(locals())
