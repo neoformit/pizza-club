@@ -12,7 +12,7 @@ def menu(request):
         if day < 4:
             return True
         elif day == 4:
-            if hour < 11:
+            if hour < 1:
                 return True
             else:
                 return False
