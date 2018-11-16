@@ -36,7 +36,8 @@ def confirm(request):
                     "Margherita":5.0,
                     "BBQ italian sausage":5.0,
                     "BBQ pork & onion":5.0,
-                    "Pepperoni":5.0
+                    "Pepperoni":5.0,
+                    "other":0
     }
     
     if request.method == 'POST':
@@ -49,11 +50,6 @@ def confirm(request):
         for key,value in request.POST.items():
             if key != "csrfmiddlewaretoken":
                 r[key] = value
-        
-        try:
-            r['item']
-        except KeyError:
-            return render(request, 'form/menu-item.html') ## error menu.html
         
         try:
             r['name']
@@ -78,9 +74,13 @@ def confirm(request):
         print("Date: %s   Cost: $%.2f" % (r['date'],r['cost']))
         
         order = Order() # Order imported from models
+        if r['item'] == "other":
+            try:
+                order.item = r['comments']
+            except KeyError:
+                return render(request, 'form/menu-item.html') ## error menu.html
         order.name = r['name']
         order.date = r['date']
-        order.item = r['item']
         order.cost = r['cost']
         order.crust = r['crust']
         order.comments = r['comments']
